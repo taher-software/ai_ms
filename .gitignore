@@ -1,0 +1,16 @@
+src/ai_processing/editing/spiga/models/weights/spiga_wflw.pt
+src/ai_processing/dialogues/stt/ml-dev.json
+src/__pycache__/*
+src/ai_processing/dialogues/stt/__pycache__/
+src/ai_processing/editing/__pycache__/
+src/ai_processing/editing/clip_withgrad/__pycache__/
+src/ai_processing/editing/xml_items/__pycache__/
+src/enums/__pycache__/
+src/models/__pycache__/
+src/models/enums/__pycache__/
+src/services/__pycache__/
+src/ai_processing/__pycache__/
+src/ai_processing/dialogues/__pycache__/
+src/ai_processing/dialogues/stt/__pycache__/
+__pycache__/
+env.sh
