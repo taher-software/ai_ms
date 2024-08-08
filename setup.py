@@ -125,5 +125,10 @@ setup(
     'websockets',
     'Werkzeug',
     'yt-dlp',
+    'python-ffmpeg-video-streaming',
+    'pycaption',
+    'sendgrid',
+    'moviepy'
+    
     ]
 ),

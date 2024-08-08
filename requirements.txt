@@ -115,3 +115,7 @@ wcwidth==0.2.13
 websockets==12.0
 Werkzeug==3.0.3
 yt-dlp==2024.8.6
+python-ffmpeg-video-streaming
+pycaption
+sendgrid
+moviepy

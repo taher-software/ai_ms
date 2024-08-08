@@ -8,6 +8,9 @@ import requests
 from google.auth.transport.requests import Request
 from src.models.user import User
 from src.orm import db
+import logging
+
+import websockets
 
 def get_resource_by_id(self, model,model_id, user_id=None, owner_id=None):
         query = model.query.filter(self._model.id == model_id)
@@ -97,3 +100,12 @@ def save(instance, flush=False):
             db.session.flush()
             db.session.refresh(instance)
         return instance
+    
+
+async def socket_broadcast(message, qParams = ''):
+    try:
+        async with websockets.connect(f"{Config.SOCKET_URI}{qParams}") as websocket:
+            await websocket.send(message.encode('utf-8'))
+    except Exception as err: 
+        logging.info(f"socket_broadcast  - {Config.SOCKET_URI}{qParams}")
+        logging.error('unable to broadcast', err)
