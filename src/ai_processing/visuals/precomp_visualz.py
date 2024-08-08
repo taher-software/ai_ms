@@ -2,10 +2,10 @@ import time
 import torch
 import numpy as np
 from src.orm import session
-from app.enums.upload_processing_status import UploadProcessingStatus
+from src.enums.upload_processing_status import UploadProcessingStatus
 from src.models.video import Video
 from src.models.image import Img
-from app.utils import utils
+from src.helper import utils
 import boto3
 import json
 from facenet_pytorch import InceptionResnetV1
@@ -22,16 +22,16 @@ import clip
 import open_clip
 from transformers import AutoProcessor, AutoModel
 from sentence_transformers import SentenceTransformer
-from app.services.upload_processing_service import UploadProcessingService
+from src.services.upload_processing_service import UploadProcessingService
 from src.config import Config
-from app.ai_processing.editing.precomp_editing import convert_to_square
-import app.ai_processing.editing.spiga.inference.config as model_cfg
-from app.ai_processing.editing.spiga.inference.framework import SPIGAFramework
-from app.ai_processing.editing.precomp_editing import landmarks_detection
+from src.ai_processing.editing.precomp_editing import convert_to_square
+import src.ai_processing.editing.spiga.inference.config as model_cfg
+from src.ai_processing.editing.spiga.inference.framework import SPIGAFramework
+from src.ai_processing.editing.precomp_editing import landmarks_detection
 
 from sqlalchemy import or_
 
-from app.ai_processing.metadata.precomp_metadata import visual_captioning
+from src.ai_processing.metadata.precomp_metadata import visual_captioning
 
 # please do not remove this line
 device = "cuda" if torch.cuda.is_available() else "cpu"

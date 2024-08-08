@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from app.ai_processing.editing.spiga.models.cnn.layers import Conv, Deconv, Residual
+from src.ai_processing.editing.spiga.models.cnn.layers import Conv, Deconv, Residual
 
 
 class Hourglass(nn.Module):

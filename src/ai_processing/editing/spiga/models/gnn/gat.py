@@ -3,7 +3,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 
-from app.ai_processing.editing.spiga.models.gnn.layers import MLP
+from src.ai_processing.editing.spiga.models.gnn.layers import MLP
 
 
 class GAT(nn.Module):

@@ -2,10 +2,10 @@ import cv2
 import numpy as np
 import torch
 
-from app.ai_processing.editing.spiga.data.loaders.augmentors.modern_posit import PositPose
-from app.ai_processing.editing.spiga.data.loaders.augmentors.heatmaps import Heatmaps
-from app.ai_processing.editing.spiga.data.loaders.augmentors.boundary import AddBoundary
-from app.ai_processing.editing.spiga.data.loaders.augmentors.landmarks import HorizontalFlipAug, RSTAug, OcclusionAug, \
+from src.ai_processing.editing.spiga.data.loaders.augmentors.modern_posit import PositPose
+from src.ai_processing.editing.spiga.data.loaders.augmentors.heatmaps import Heatmaps
+from src.ai_processing.editing.spiga.data.loaders.augmentors.boundary import AddBoundary
+from src.ai_processing.editing.spiga.data.loaders.augmentors.landmarks import HorizontalFlipAug, RSTAug, OcclusionAug, \
                                               LightingAug, BlurAug, TargetCropAug
 
 

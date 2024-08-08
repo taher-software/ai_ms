@@ -24,7 +24,7 @@ class S3DownloadHandler(Handler):
         self._previous_completed = 0
         self._channel = None
         self._video_id = None
-        from app import app
+        from src.main import app
         self._app = app
 
     def _handle(self, context):

@@ -1,11 +1,11 @@
 from decimal import Decimal
-from app.ai_processing.dialogues.stt.srt_gen_provider_types import SrtGenProviderTypes
-from app.enums.upload_processing_status import UploadProcessingStatus
+from src.ai_processing.dialogues.stt.srt_gen_provider_types import SrtGenProviderTypes
+from src.enums.upload_processing_status import UploadProcessingStatus
 from src.models.video import Video
-from app.ai_processing.dialogues.stt.assembly import assembly
-from app.ai_processing.dialogues.stt.rev import rev
-from app.ai_processing.dialogues.stt.deepgram import deepgram
-from app.utils import utils
+from src.ai_processing.dialogues.stt.assembly import assembly
+from src.ai_processing.dialogues.stt.rev import rev
+from src.ai_processing.dialogues.stt.deepgram import deepgram
+from src.helper import utils
 from src.config import Config
 from google.cloud import storage
 from scipy.io.wavfile import read as read_wav

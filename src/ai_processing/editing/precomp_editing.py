@@ -3,9 +3,9 @@ import numpy as np
 import math
 import dlib
 import pickle
-import app.ai_processing.editing.det_config as det_cfg
-import app.ai_processing.editing.spiga.inference.config as model_cfg
-from app.ai_processing.editing.spiga.inference.framework import SPIGAFramework
+import src.ai_processing.editing.det_config as det_cfg
+import src.ai_processing.editing.spiga.inference.config as model_cfg
+from src.ai_processing.editing.spiga.inference.framework import SPIGAFramework
 import retinaface
 import clip
 import torch
@@ -18,7 +18,7 @@ from scipy.spatial.distance import cosine
 
 from src.orm import session
 from src.models.video import Video
-from app.services.upload_processing_service import UploadProcessingService
+from src.services.upload_processing_service import UploadProcessingService
 from src.config import Config
 
 device = "cuda" if torch.cuda.is_available() else "cpu"

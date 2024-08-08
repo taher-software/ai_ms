@@ -197,7 +197,7 @@ class Video(db.Model):
         return data
 
     def to_json_with_shots_and_transcript(self):
-        from app.ai_processing.editing.process_editing import ai_shot_splitter
+        from src.ai_processing.editing.process_editing import ai_shot_splitter
         response = self.to_json()
 
         try:

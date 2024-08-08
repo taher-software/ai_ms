@@ -26,7 +26,7 @@ class DropboxDownloadHandler(Handler):
         super().__init__()
         self._channel = None
         self._video_id = None
-        from app import app
+        from src.main import app
         self._app = app
 
     def _handle(self, context):
@@ -104,7 +104,7 @@ class DropboxDownloadHandler(Handler):
                     
     def progress_callback(self,current, total,user_email,timestamp):
         progress = (current/total) * 100
-        from app import app 
+        from src.main import app 
         try:
             message = json.dumps(
                 {"email": user_email, "id": self._video_id, "type": IntegrationType.GDRIVE.value, "ts": timestamp, "completed": math.floor(progress)}, default=str)

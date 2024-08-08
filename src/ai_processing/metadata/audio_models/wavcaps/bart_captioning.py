@@ -11,8 +11,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 from transformers import BartForConditionalGeneration, BartTokenizer, BartConfig
-from app.ai_processing.metadata.audio_models.wavcaps.audio_encoder_config import AudioEncoderConfig
-from app.ai_processing.metadata.audio_models.wavcaps.audio_encoder import AudioEncoderModel
+from src.ai_processing.metadata.audio_models.wavcaps.audio_encoder_config import AudioEncoderConfig
+from src.ai_processing.metadata.audio_models.wavcaps.audio_encoder import AudioEncoderModel
 
 
 class BartCaptionModel(nn.Module):

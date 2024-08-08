@@ -2,14 +2,14 @@ import torch
 import time
 import numpy as np
 from pycaption import SRTReader
-from app import db
-from app.enums.upload_processing_status import UploadProcessingStatus
+from src.orm import db
+from src.enums.upload_processing_status import UploadProcessingStatus
 from src.models.video import Video
-from app.services.upload_processing_service import UploadProcessingService
+from src.services.upload_processing_service import UploadProcessingService
 from src.config import Config
 from sentence_transformers import SentenceTransformer
-from app.ai_processing.dialogues.stt.srt_gen import srt_gen
-from app.ai_processing.dialogues.process_dialogz import topic_modeling, process_dialogue, offset_caption
+from src.ai_processing.dialogues.stt.srt_gen import srt_gen
+from src.ai_processing.dialogues.process_dialogz import topic_modeling, process_dialogue, offset_caption
 
 
 import tiktoken

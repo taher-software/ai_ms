@@ -5,7 +5,7 @@ import numpy as np
 import os
 import random
 import re
-from app import app
+from src.main import app
 from src.config import Config
 
 # please do not remove this line

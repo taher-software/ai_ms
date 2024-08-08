@@ -12,10 +12,10 @@ import ffmpeg_streaming
 import spacy
 import json
 from scipy import signal
-import app.ai_processing.editing.clip_withgrad as clip_grad
+import src.ai_processing.editing.clip_withgrad as clip_grad
 import math
 from ffmpeg_streaming import Formats, Bitrate, Representation, Size
-from app.enums.upload_processing_status import UploadProcessingStatus
+from src.enums.upload_processing_status import UploadProcessingStatus
 
 
 ############################## NON-AI EDITING ##################################################################################
@@ -46,7 +46,7 @@ def beta_re_enc(video):
     out_path = vid_path.replace('.mp4', '_reenc.mp4')
 
     start_time = time.time()
-    from app.utils import utils
+    from src.helper import utils
     utils.inform_in_thread(video.id, UploadProcessingStatus.RE_ENCODING)
 
     cmd = f"ffmpeg -y -i {vid_path} -c:v libx264 -preset superfast -crf 25 -c:a copy {out_path}"

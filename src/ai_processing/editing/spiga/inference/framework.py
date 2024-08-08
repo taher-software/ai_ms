@@ -5,11 +5,11 @@ import torch
 import numpy as np
 
 # Paths
-weights_path_dft = pkg_resources.resource_filename('app.ai_processing.editing.spiga', 'models/weights')
+weights_path_dft = pkg_resources.resource_filename('src.ai_processing.editing.spiga', 'models/weights')
 
-import app.ai_processing.editing.spiga.inference.pretreatment as pretreat
-from app.ai_processing.editing.spiga.models.spiga import SPIGA
-from app.ai_processing.editing.spiga.inference.config import ModelConfig
+import src.ai_processing.editing.spiga.inference.pretreatment as pretreat
+from src.ai_processing.editing.spiga.models.spiga import SPIGA
+from src.ai_processing.editing.spiga.inference.config import ModelConfig
 
 
 class SPIGAFramework:

@@ -4,10 +4,10 @@ import torch
 import numpy as np
 import os
 from src.orm import session
-from app.enums.upload_processing_status import UploadProcessingStatus
+from src.enums.upload_processing_status import UploadProcessingStatus
 from src.models.video import Video
-from app.services.upload_processing_service import UploadProcessingService
-from app.utils import utils
+from src.services.upload_processing_service import UploadProcessingService
+from src.helper import utils
 from src.config import Config
 import cv2
 import subprocess

@@ -9,8 +9,8 @@ from torch.nn import CrossEntropyLoss
 from transformers import PreTrainedModel, PretrainedConfig, VisionEncoderDecoderConfig, AutoModelForCausalLM
 from transformers.modeling_outputs import Seq2SeqLMOutput, BaseModelOutput
 
-from app.ai_processing.metadata.audio_models.wavcaps.audio_encoder import AudioEncoderModel
-from app.ai_processing.metadata.audio_models.wavcaps.configuration_audio_encoder_decoder import AudioEncoderDecoderConfig
+from src.ai_processing.metadata.audio_models.wavcaps.audio_encoder import AudioEncoderModel
+from src.ai_processing.metadata.audio_models.wavcaps.configuration_audio_encoder_decoder import AudioEncoderDecoderConfig
 
 
 # Copied from transformers.models.encoder_decoder.modeling_encoder_decoder.shift_tokens_right

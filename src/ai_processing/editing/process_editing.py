@@ -15,21 +15,21 @@ import json
 from scipy import signal
 from moviepy.editor import ImageSequenceClip
 import imageio
-import app.ai_processing.editing.clip_withgrad as clip_grad
+import src.ai_processing.editing.clip_withgrad as clip_grad
 
-from app import db
+from src.orm import db
 from src.path import join_paths
 from src.config import Config
 from ffmpeg_streaming import Formats, Bitrate, Representation, Size
-from app.enums.upload_processing_status import UploadProcessingStatus
+from src.enums.upload_processing_status import UploadProcessingStatus
 from src.models.video import Video
 from src.models.collection import Collection
 from src.models.saved_clip import SavedClip
 
-from app.ai_processing.editing.xml_items.crop_item import crop_item
-from app.ai_processing.editing.xml_items.caption_item import caption_item
-from app.ai_processing.editing.xml_items.audio_item import audio_item
-from app.ai_processing.editing.xml_items.sequence import sequence_item
+from src.ai_processing.editing.xml_items.crop_item import crop_item
+from src.ai_processing.editing.xml_items.caption_item import caption_item
+from src.ai_processing.editing.xml_items.audio_item import audio_item
+from src.ai_processing.editing.xml_items.sequence import sequence_item
 import xmltodict
 import copy
 
@@ -83,7 +83,7 @@ def re_enc(vid_id):
     out_path = vid_path.replace('.mp4', '_reenc.mp4')
 
     start_time = time.time()
-    from app.utils import utils
+    from src.helper import utils
     utils.inform_in_thread(vid_id, UploadProcessingStatus.RE_ENCODING)
 
     cmd = f"ffmpeg -y -i {vid_path} -c:v libx264 -preset superfast -crf 25 -c:a copy {out_path}"

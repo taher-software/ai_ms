@@ -31,7 +31,7 @@ class GdriveDownloadHandler(Handler):
         self._previous_completed = 0
         self._channel = None
         self._video_id = None
-        from app import app
+        from src.main import app
         self._app = app
 
     def _handle(self, context):
@@ -113,7 +113,7 @@ class GdriveDownloadHandler(Handler):
         return kwargs.get('credentials')
 
     def gdrive_progress_callback(self, user_email, timestamp, progress):
-        from app import app
+        from src.main import app
         try:
             message = json.dumps(
                 {"email": user_email, "id": self._video_id, "type": IntegrationType.GDRIVE.value, "ts": timestamp, "completed": math.floor(progress)}, default=str)

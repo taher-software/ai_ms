@@ -7,9 +7,9 @@ from abc import ABC
 import torch
 import yaml
 from transformers.modeling_outputs import BaseModelOutput
-from app.ai_processing.metadata.audio_models.wavcaps.htsat import HTSAT_Swin_Transformer
+from src.ai_processing.metadata.audio_models.wavcaps.htsat import HTSAT_Swin_Transformer
 from transformers import PreTrainedModel
-from app.ai_processing.metadata.audio_models.wavcaps.audio_encoder_config import AudioEncoderConfig
+from src.ai_processing.metadata.audio_models.wavcaps.audio_encoder_config import AudioEncoderConfig
 import os
 from src.config import Config
 from app.utils import utils

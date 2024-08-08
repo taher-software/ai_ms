@@ -4,10 +4,10 @@ import numpy as np
 import cv2
 
 # My libs
-from app.ai_processing.editing.spiga.data.loaders.augmentors.utils import rotation_matrix_to_euler
+from src.ai_processing.editing.spiga.data.loaders.augmentors.utils import rotation_matrix_to_euler
 
 # Model file nomenclature
-model_file_dft = pkg_resources.resource_filename('app.ai_processing.editing.spiga', 'data/models3D') + '/mean_face_3D_{num_ldm}.txt'
+model_file_dft = pkg_resources.resource_filename('src.ai_processing.editing.spiga', 'data/models3D') + '/mean_face_3D_{num_ldm}.txt'
 
 
 class PositPose:

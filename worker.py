@@ -14,8 +14,10 @@ from src.config import Config
 app.config.from_object(Config)
 rq = RQ(app)
 redis_connection = rq.connection
-from src.integration_downloads.downloader import Downloader
+#from src.integration_downloads.downloader import Downloader
 from src.video_processing import re_enc
+from src.integration_downloads.downloader import Downloader
+
 
 
 # def get_project_id():

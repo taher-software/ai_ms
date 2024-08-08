@@ -72,7 +72,7 @@ class Downloader:
 
     def download(video_id, context):
         logging.info('Starting upload process')
-
+        print('Starting upload process')
         video = Video().query.get(video_id)
         with tempfile.TemporaryDirectory(prefix=f"{Config.FILESYSTEM_ROOT_DIR}/temp_") as tmp_dir:
             context['working_dir'] = tmp_dir

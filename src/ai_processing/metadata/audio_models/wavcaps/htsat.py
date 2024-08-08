@@ -23,7 +23,7 @@ from torch.nn.init import _calculate_fan_in_and_fan_out
 from itertools import repeat
 from typing import List
 
-from app.ai_processing.metadata.audio_models.wavcaps.feature_extractor import AudioFeature
+from src.ai_processing.metadata.audio_models.wavcaps.feature_extractor import AudioFeature
 
 
 def interpolate(x, ratio):

@@ -11,7 +11,7 @@ from io import BytesIO
 import base64
 from PIL import Image
 from src.config import Config
-from app.ai_processing.audios.precomp_audioz import has_audio
+from src.ai_processing.audios.precomp_audioz import has_audio
 import re
 from collections import defaultdict
 
@@ -26,9 +26,9 @@ openai_client = OpenAI(api_key=Config.openai_api_key)
 import librosa
 import torch
 import torch.nn.functional as F
-from app.ai_processing.metadata.audio_models.wavcaps.bart_captioning import BartCaptionModel
+from src.ai_processing.metadata.audio_models.wavcaps.bart_captioning import BartCaptionModel
 from transformers import WhisperTokenizer, WhisperFeatureExtractor
-from app.ai_processing.metadata.audio_models.audiocap.audiocap import WhisperForAudioCaptioning
+from src.ai_processing.metadata.audio_models.audiocap.audiocap import WhisperForAudioCaptioning
 from hsemotion.facial_emotions import HSEmotionRecognizer
 
 # please do not remove this line

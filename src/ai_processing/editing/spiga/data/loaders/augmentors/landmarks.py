@@ -5,7 +5,7 @@ from PIL import Image
 from torchvision import transforms
 
 # My libs
-import app.ai_processing.editing.spiga.data.loaders.augmentors.utils as dlu
+import src.ai_processing.editing.spiga.data.loaders.augmentors.utils as dlu
 
 
 class HorizontalFlipAug:

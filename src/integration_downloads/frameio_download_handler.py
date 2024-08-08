@@ -25,7 +25,7 @@ class FrameioDownloadHandler(Handler):
         self._channel = None
         self._user_email = None
         self._video_id = None
-        from app import app
+        from src.main import app
         self._app = app
 
     def _handle(self, context):

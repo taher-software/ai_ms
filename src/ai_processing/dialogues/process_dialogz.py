@@ -2,8 +2,8 @@ from collections import Counter
 import json
 import logging
 import pickle
-from app.ai_processing.dialogues.wordcloud.wordcloud import WordCloud
-from app.ai_processing.dialogues.stt.json2srt_txt import json2srt_txt
+from src.ai_processing.dialogues.wordcloud.wordcloud import WordCloud
+from src.ai_processing.dialogues.stt.json2srt_txt import json2srt_txt
 from src.models.image import Img
 from bertopic import BERTopic
 from src.config import Config
@@ -470,7 +470,7 @@ def process_dialogues(timestamp, user_email, videos, query_embeddings, nb_frames
             nb_samp: number of clips to be extracted
     """
 
-    from app.workers.socket_broadcast import socket_broadcast
+    from src.utils import socket_broadcast
     from src.models.video import Video
     
     vid_casts = {}

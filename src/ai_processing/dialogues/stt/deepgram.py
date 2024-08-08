@@ -2,7 +2,7 @@ from pycaption import SRTReader
 from deepgram import Deepgram
 import json
 
-from app.ai_processing.dialogues.stt.json2srt_txt import json2srt_txt
+from src.ai_processing.dialogues.stt.json2srt_txt import json2srt_txt
 
 def read_captions(srt_path, lang):
 

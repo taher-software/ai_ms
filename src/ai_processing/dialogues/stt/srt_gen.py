@@ -1,11 +1,11 @@
 import logging
 import os
-from app.ai_processing.dialogues.stt.srt_gen_provider_service import SrtGenProvidersService
-from app.ai_processing.dialogues.stt.srt_gen_provider_types import SrtGenProviderTypes
-from app.enums.upload_processing_status import UploadProcessingStatus
-from app.services.upload_processing_service import UploadProcessingService
+from src.ai_processing.dialogues.stt.srt_gen_provider_service import SrtGenProvidersService
+from src.ai_processing.dialogues.stt.srt_gen_provider_types import SrtGenProviderTypes
+from src.enums.upload_processing_status import UploadProcessingStatus
+from src.services.upload_processing_service import UploadProcessingService
 from src.config import Config
-from app import db
+from src.orm import db
 
 from src.models.video import Video
 

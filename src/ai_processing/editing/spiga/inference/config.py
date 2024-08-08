@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-from app.ai_processing.editing.spiga.data.loaders.dl_config import DatabaseStruct
+from src.ai_processing.editing.spiga.data.loaders.dl_config import DatabaseStruct
 from src.config import Config
 
 MODELS_URL = {'wflw': 'https://drive.google.com/uc?export=download&confirm=yes&id=1h0qA5ysKorpeDNRXe9oYkVcVe8UYyzP7',

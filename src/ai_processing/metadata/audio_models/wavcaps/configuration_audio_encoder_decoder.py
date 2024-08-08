@@ -22,8 +22,8 @@ import copy
 
 from transformers import PretrainedConfig, AutoConfig, BertConfig
 
-from app.ai_processing.metadata.audio_models.wavcaps.audio_encoder_config import AudioEncoderConfig
-from app.ai_processing.metadata.audio_models.wavcaps.audio_encoder import AudioEncoderModel
+from src.ai_processing.metadata.audio_models.wavcaps.audio_encoder_config import AudioEncoderConfig
+from src.ai_processing.metadata.audio_models.wavcaps.audio_encoder import AudioEncoderModel
 
 
 class AudioEncoderDecoderConfig(PretrainedConfig):
