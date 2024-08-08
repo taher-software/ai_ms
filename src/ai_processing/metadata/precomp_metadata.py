@@ -2,7 +2,7 @@ import time
 import numpy as np
 from src.orm import session
 from src.models.video import Video
-from app.utils import utils
+from src.helper import utils
 import os
 import pickle
 import cv2
